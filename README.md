@@ -1,18 +1,18 @@
 # Clubia — Gestion des activités des clubs
 
-Prototype web en français pour l’administration des clubs étudiants de l’ISET Djerba.
+Application Laravel pour la communauté étudiante de l’ISET Djerba.
 
 ## Lancer
 
-Ouvrir `index.html` dans un navigateur récent. Aucune installation n’est nécessaire. Les données sont enregistrées dans le stockage local du navigateur.
+Dans `laravel-app`, exécuter `php artisan serve`, puis ouvrir http://127.0.0.1:8000.
 
-## Fonctions
+Les prérequis sont PHP 8.3+, Composer et SQLite. Pour installer sur une nouvelle machine : `composer install`, copier `.env.example` vers `.env`, configurer `DB_CONNECTION=sqlite`, puis exécuter `php artisan key:generate`, `php artisan migrate --seed`.
 
-- Tableau de bord et prochaines activités.
-- Création, modification et suppression des clubs.
-- Gestion des activités et validation des demandes.
-- Gestion des membres et de leurs rôles.
-- Suivi et confirmation des inscriptions.
-- Recherche dans les listes et mise en page mobile.
+## Accès de démonstration
 
-Les données de démonstration sont locales à ce navigateur. Ce prototype n’a pas encore de serveur, d’authentification ni de synchronisation entre appareils.
+- Administrateur : `admin@iset.tn`
+- Mot de passe initial : `ChangeMe123!` (à remplacer avant toute utilisation réelle)
+- Un étudiant peut créer son compte depuis l’écran de connexion.
+- L’administrateur peut créer des comptes responsables depuis son tableau de bord.
+
+Les rôles sont `admin`, `responsable` et `etudiant`. Les mots de passe sont hachés et les pages de l’application nécessitent une session authentifiée.
